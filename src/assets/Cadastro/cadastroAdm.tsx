@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Animated, Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native';
-import cadastroAdm from '../Cadastro/cadastroAdm';
-function SignIn(): JSX.Element {
 
-    const navigation = useNavigation();
+function CadastroAdm(): JSX.Element {
+
+
 
 
 
@@ -19,35 +19,42 @@ function SignIn(): JSX.Element {
             <Animatable.View animation="fadeInLeft"
                 delay={500} style={styles.containerHeader} >
 
-                <Text style={styles.message}>Bem-Vindo(a)</Text>
+                <Text style={styles.message}>Cadastrar Administrador(a)</Text>
             </Animatable.View>
 
             <Animatable.View animation="fadeInUp"
                 style={styles.containerForm} >
-                <Text style={styles.title}>E-mail</Text>
+                <Text style={styles.title}>Nome</Text>
                 <TextInput
-                    placeholder="Digite um email..."
+                    placeholder="Nome"
                     style={styles.input}></TextInput>
 
+                <Text style={styles.title}>E-mail</Text>
+                <TextInput
+                    placeholder="Ex: fulano@gmail.com"
+                    style={styles.input}></TextInput>
+
+                <Text style={styles.title}>CPF</Text>
+                <TextInput
+                    placeholder="Ex:12345678911"
+                    style={styles.input}></TextInput>
                 <Text style={styles.title}>Senha</Text>
                 <TextInput
-                    placeholder="Digite uma senha..."
+                    placeholder="Digite uma senha"
                     style={styles.input}></TextInput>
+                
+
 
 
 
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>
-                        Acessar
+                        Cadastrar
                     </Text>
                 </TouchableOpacity>
 
 
-                <TouchableOpacity style={styles.buttonRegister}>
-                    <Text style={styles.registerText} onPress={() => navigation.navigate('cadastroAdm')}>
-                        Não possui uma conta?: Cadastre
-                    </Text>
-                </TouchableOpacity>
+                
 
 
 
@@ -115,7 +122,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
     }, registerText: {
 
-color:'#a1a1a1'
+        color: '#a1a1a1'
 
 
     }
@@ -136,4 +143,4 @@ color:'#a1a1a1'
 
 
 
-export default SignIn;
+export default CadastroAdm;
