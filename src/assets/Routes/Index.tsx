@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Welcome, { } from '../Welcome/Welcome';
 import SignIn, { } from '../SignIn/SignIn';
 import cadastroAdm from "../Cadastro/cadastroAdm";
+import CadastroPage from "../Cadastro/centralCadastro";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +25,12 @@ export default function Routes() {
             <Stack.Screen
                 name="cadastroAdm"
                 component={cadastroAdm}
+                options={{ headerShown: false }}
+            />
+
+            <Stack.Screen
+                name="cadastroPage"
+                component={CadastroPage}
                 options={{ headerShown: false }}
             />
 
